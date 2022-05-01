@@ -15,7 +15,15 @@
 // ]
 // Sortie attendue : [2, 1]
 
-function findTheBug(arr){}
+function findTheBug(arr){
+  let bugLocation = []
+
+  arr.forEach((line, index) => {
+    if (line.includes("B")) bugLocation = [index, line.indexOf("B")]
+  });
+
+  return bugLocation
+}
 
 module.exports = findTheBug
 
